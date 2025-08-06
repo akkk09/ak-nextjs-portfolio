@@ -1,0 +1,174 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { Copy, ExternalLink } from "lucide-react"
+import { useState } from "react"
+
+export function ContactSection() {
+  const [emailCopied, setEmailCopied] = useState(false)
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("dosofisan7@gmail.com")
+    setEmailCopied(true)
+    setTimeout(() => setEmailCopied(false), 2000)
+  }
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+        ease: [0.25, 0.1, 0.25, 1.0],
+      },
+    },
+  }
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1.0],
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1.0],
+      },
+    },
+  }
+
+  return (
+    <section id="across-the-web" className="section-spacing leading-6 pb-32">
+      <div className="container-xl">
+        <motion.h2
+          variants={titleVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="section-title mb-24"
+        >
+          Across the Web
+        </motion.h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16"
+        >
+          <div className="space-y-8">
+            <motion.div variants={itemVariants} className="border-b border-foreground/10 pb-4">
+              <div className="flex items-center justify-between">
+                <span className="contact-label text-foreground/60">Email</span>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="mailto:itsjustanantha@gmail.com"
+                    className="contact-text text-foreground hover:text-foreground/80 transition-colors duration-300"
+                    onClick={(e) => {
+                      if (window.innerWidth < 768) {
+                        e.preventDefault()
+                        copyEmail()
+                      }
+                    }}
+                  >
+                    itsjustanantha@gmail.com
+                  </a>
+                  <button
+                    onClick={copyEmail}
+                    className="text-foreground/40 hover:text-foreground/80 transition-colors duration-300"
+                    aria-label="Copy email address"
+                  >
+                    <Copy className="h-3.5 w-3.5" />
+                    <span className="sr-only">Copy</span>
+                  </button>
+                  {emailCopied && <span className="meta-text text-foreground/60 ml-1">Copied</span>}
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="border-b border-foreground/10 pb-4">
+              <div className="flex items-center justify-between">
+                <span className="contact-label text-foreground/60">Instagram</span>
+                <a
+                  href="https://www.instagram.com/a.nantha_k/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-text text-foreground hover:text-foreground/80 transition-colors duration-300 flex items-center gap-2"
+                >
+                  https://www.instagram.com/a.nantha_k/
+                  <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="border-b border-foreground/10 pb-4">
+              <div className="flex items-center justify-between">
+                <span className="contact-label text-foreground/60">GitHub</span>
+                <a
+                  href="https://github.com/damilareoo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-text text-foreground hover:text-foreground/80 transition-colors duration-300 flex items-center gap-2"
+                >
+                  github.com/damilareoo
+                  <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+                </a>
+              </div>
+            </motion.div>
+
+            
+          </div>
+
+          <div className="space-y-8">
+            <motion.div variants={itemVariants} className="border-b border-foreground/10 pb-4">
+              <div className="flex items-center justify-between">
+                <span className="contact-label text-foreground/60">Spotify</span>
+                <a
+                  href="https://open.spotify.com/user/z56x9sjg6xgu7lvzwvoh8d0fa?si=ea1df455d2814d6b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-text text-foreground hover:text-foreground/80 transition-colors duration-300 flex items-center gap-2"
+                >
+                  https://open.spotify.com/user/hololoyo
+                  <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+                </a>
+              </div>
+            </motion.div>
+
+            
+
+            <motion.div variants={itemVariants} className="border-b border-foreground/10 pb-4">
+              <div className="flex items-center justify-between">
+                <span className="contact-label text-foreground/60">My Blog </span>
+                <a
+                  href="https://ananthakblog.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-text text-foreground hover:text-foreground/80 transition-colors duration-300 flex items-center gap-2"
+                >
+                  https://ananthakblog.vercel.app/<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5 opacity-50"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                  <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+                </a>
+              </div>
+            </motion.div>
+
+            
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
