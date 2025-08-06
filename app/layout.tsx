@@ -8,20 +8,20 @@ import { Suspense } from "react"
 const timestamp = new Date().getTime()
 
 export const metadata: Metadata = {
-  title: "Damilare Osofisan | Designer & Developer",
-  description: "Portfolio of Damilare Osofisan, a designer and developer creating digital experiences.",
-  metadataBase: new URL("https://damilareoo.xyz"),
+  title: " Anantha  | Designer & Developer",
+  description: "Portfolio of  Anantha , a designer and developer creating digital experiences.",
+  metadataBase: new URL("https://Ananthaoo.xyz"),
   openGraph: {
-    title: "Damilare Osofisan | Designer & Developer",
-    description: "Portfolio of Damilare Osofisan, a designer and developer creating digital experiences.",
-    url: "https://damilareoo.xyz",
-    siteName: "Damilare Osofisan | damilareoo.xyz",
+    title: " Anantha  | Designer & Developer",
+    description: "Portfolio of  Anantha , a designer and developer creating digital experiences.",
+    url: "https:// Ananthaoo.xyz",
+    siteName: " Anantha  |  Ananthaoo.xyz",
     images: [
       {
         url: `/images/og-image.png?v=${timestamp}`,
         width: 1200,
         height: 630,
-        alt: "Damilare Osofisan",
+        alt: " Anantha ",
       },
     ],
     locale: "en_US",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Damilare Osofisan | Designer & Developer",
-    description: "Portfolio of Damilare Osofisan, a designer and developer creating digital experiences.",
+    title: " Anantha  | Designer & Developer",
+    description: "Portfolio of  Anantha , a designer and developer creating digital experiences.",
     images: [`/images/og-image.png?v=${timestamp}`],
-    creator: "@damilare_oo",
+    creator: "@ Anantha_oo",
   },
     generator: 'v0.dev'
 }
@@ -46,28 +46,28 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Force refresh of social media cache with timestamp */}
-        <meta property="og:image" content={`https://damilareoo.xyz/images/og-image.png?v=${timestamp}`} />
+        <meta property="og:image" content={`https:// Ananthaoo.xyz/images/og-image.png?v=${timestamp}`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Damilare Osofisan" />
+        <meta property="og:image:alt" content=" Anantha " />
         <meta property="og:image:type" content="image/png" />
 
-        <meta name="twitter:image" content={`https://damilareoo.xyz/images/og-image.png?v=${timestamp}`} />
-        <meta name="twitter:image:alt" content="Damilare Osofisan" />
+        <meta name="twitter:image" content={`https:// Ananthaoo.xyz/images/og-image.png?v=${timestamp}`} />
+        <meta name="twitter:image:alt" content=" Anantha " />
         <meta name="twitter:card" content="summary_large_image" />
 
         {/* LinkedIn specific */}
-        <meta property="og:image:secure_url" content={`https://damilareoo.xyz/images/og-image.png?v=${timestamp}`} />
+        <meta property="og:image:secure_url" content={`https:// Ananthaoo.xyz/images/og-image.png?v=${timestamp}`} />
 
         {/* Additional social media tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://damilareoo.xyz" />
-        <meta property="og:title" content="Damilare Osofisan | Designer & Developer" />
+        <meta property="og:url" content="https:// Ananthaoo.xyz" />
+        <meta property="og:title" content=" Anantha  | Designer & Developer" />
         <meta
           property="og:description"
-          content="Portfolio of Damilare Osofisan, a designer and developer creating digital experiences."
+          content="Portfolio of  Anantha , a designer and developer creating digital experiences."
         />
-        <meta property="og:site_name" content="Damilare Osofisan | damilareoo.xyz" />
+        <meta property="og:site_name" content=" Anantha  |  Ananthaoo.xyz" />
 
         {/* Cache control for better refreshing */}
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />

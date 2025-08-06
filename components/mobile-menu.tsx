@@ -108,7 +108,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </div>
 
             <div className="border-t border-foreground/10 p-6">
-              <p className="meta-text text-foreground-secondary">&copy; {new Date().getFullYear()} Damilare Osofisan</p>
+              <p className="meta-text text-foreground-secondary">&copy; {new Date().getFullYear()}  Anantha </p>
             </div>
           </motion.div>
         </div>
